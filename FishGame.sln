@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishGame.CSharp", "FishGame.CSharp.csproj", "{9CD5A998-F648-8A10-CF5B-1826978C55EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishGame.CSharp.Editor", "FishGame.CSharp.Editor.csproj", "{FE810D70-BC12-F4C3-1ADE-834A9606099B}"
+EndProject
+Project("{5697748A-77EF-44CA-8824-4F5637E5945B}") = "FishGame", "Assets\FishGame.luaproj", "{E439935D-B2A2-46AE-856D-2AA408428F33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CD5A998-F648-8A10-CF5B-1826978C55EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD5A998-F648-8A10-CF5B-1826978C55EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD5A998-F648-8A10-CF5B-1826978C55EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD5A998-F648-8A10-CF5B-1826978C55EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE810D70-BC12-F4C3-1ADE-834A9606099B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE810D70-BC12-F4C3-1ADE-834A9606099B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE810D70-BC12-F4C3-1ADE-834A9606099B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE810D70-BC12-F4C3-1ADE-834A9606099B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
