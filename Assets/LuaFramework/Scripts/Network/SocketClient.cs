@@ -99,6 +99,7 @@ public class SocketClient {
             lock (client.GetStream()) {         //读取字节流到缓冲区
                 bytesRead = client.GetStream().EndRead(asr);
             }
+            Debug.LogWarning("bytesReadSize = "+ bytesRead);
             if (bytesRead < 1) {                //包尺寸有问题，断线处理
                 OnDisconnected(DisType.Disconnect, "bytesRead < 1");
                 return;

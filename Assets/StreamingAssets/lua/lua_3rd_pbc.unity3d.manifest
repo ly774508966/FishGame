@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2569767547
+CRC: 1340554497
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 880175c7e28d8918f59e1294d41b0d34
+    Hash: d1c1e372cfb98f32f3742c9fc9f82518
   TypeTreeHash:
     serializedVersion: 2
     Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
@@ -12,9 +12,9 @@ ClassTypes:
 - Class: 49
   Script: {instanceID: 0}
 Assets:
-- Assets/Lua/3rd/pbc/test.lua.bytes
-- Assets/Lua/3rd/pbc/protobuf.lua.bytes
-- Assets/Lua/3rd/pbc/parser.lua.bytes
-- Assets/Lua/3rd/pbc/test2.lua.bytes
 - Assets/Lua/3rd/pbc/testparser.lua.bytes
+- Assets/Lua/3rd/pbc/test.lua.bytes
+- Assets/Lua/3rd/pbc/parser.lua.bytes
+- Assets/Lua/3rd/pbc/protobuf.lua.bytes
+- Assets/Lua/3rd/pbc/test2.lua.bytes
 Dependencies: []

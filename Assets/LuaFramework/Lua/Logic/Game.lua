@@ -32,6 +32,7 @@ end
 
 --初始化完成，发送链接服务器信息--
 function Game.OnInitOK()
+    print("进入Game的OnInitOK方法，开始实例化");
     AppConst.SocketPort = 8038;
     AppConst.SocketAddress = "192.168.10.69";
     networkMgr:SendConnect();
@@ -48,11 +49,14 @@ function Game.OnInitOK()
 --    coroutine.start(this.test_coroutine);
 
     CtrlManager.Init();
-    local ctrl = CtrlManager.GetCtrl(CtrlNames.Prompt);
-    if ctrl ~= nil and AppConst.ExampleMode then
-        ctrl:Awake();
+--    local ctrl = CtrlManager.GetCtrl(CtrlNames.Prompt);
+--    if ctrl ~= nil and AppConst.ExampleMode then
+--        ctrl:Awake();
+--    end
+    local startUpCtrl = CtrlManager.GetCtrl(CtrlNames.Main);
+    if startUpCtrl ~= nil then 
+        startUpCtrl:Awake();
     end
-       
     logWarn('LuaFramework InitOK--->>>');
 end
 

@@ -39,7 +39,7 @@ end
 --异常断线--
 function Network.OnException() 
     islogging = false; 
-    NetManager:SendConnect();
+--    networkMgr:SendConnect();
    	logError("OnException------->>>>");
 end
 

@@ -32,7 +32,6 @@ namespace LuaFramework {
                 if (objs.Length == 0) return;
                 // Get the asset.
                 GameObject prefab = objs[0] as GameObject;
-
                 if (Parent.FindChild(name) != null || prefab == null) {
                     return;
                 }

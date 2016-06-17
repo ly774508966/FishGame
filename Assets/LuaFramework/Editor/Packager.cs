@@ -71,9 +71,9 @@ public class Packager {
         } else {
             HandleLuaFile();
         }
-        if (AppConst.ExampleMode) {
-            HandleExampleBundle();
-        }
+        //if (AppConst.ExampleMode) {
+        HandleExampleBundle();
+        //}
         string resPath = "Assets/" + AppConst.AssetDir;
         BuildAssetBundleOptions options = BuildAssetBundleOptions.DeterministicAssetBundle | 
                                           BuildAssetBundleOptions.UncompressedAssetBundle;
@@ -105,7 +105,7 @@ public class Packager {
         string streamDir = Application.dataPath + "/" + AppConst.LuaTempDir;
         if (!Directory.Exists(streamDir)) Directory.CreateDirectory(streamDir);
 
-        string[] srcDirs = { CustomSettings.luaDir, CustomSettings.FrameworkPath + "/ToLua/Lua" };
+        string[] srcDirs = { CustomSettings.luaDir, CustomSettings.FrameworkPath + "/ToLua/Lua"};
         for (int i = 0; i < srcDirs.Length; i++) {
             if (AppConst.LuaByteMode) {
                 string sourceDir = srcDirs[i];
@@ -162,12 +162,12 @@ public class Packager {
     static void HandleExampleBundle() {
         string resPath = AppDataPath + "/" + AppConst.AssetDir + "/";
         if (!Directory.Exists(resPath)) Directory.CreateDirectory(resPath);
+        
+        AddBuildMap("main" + AppConst.ExtName, "*.prefab", "Assets/Resources/UI/Panel/Main");
+        //AddBuildMap("message" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/Message");
 
-        AddBuildMap("prompt" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/Prompt");
-        AddBuildMap("message" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/Message");
-
-        AddBuildMap("prompt_asset" + AppConst.ExtName, "*.png", "Assets/LuaFramework/Examples/Textures/Prompt");
-        AddBuildMap("shared_asset" + AppConst.ExtName, "*.png", "Assets/LuaFramework/Examples/Textures/Shared");
+        AddBuildMap("main_asset" + AppConst.ExtName, "*.png", "Assets/Atlas/Textures/Main");
+        //AddBuildMap("shared_asset" + AppConst.ExtName, "*.png", "Assets/LuaFramework/Examples/Textures/Shared");
     }
 
     /// <summary>
@@ -301,10 +301,10 @@ public class Packager {
 
     [MenuItem("LuaFramework/Build Protobuf-lua-gen File")]
     public static void BuildProtobufFile() {
-        if (!AppConst.ExampleMode) {
-            Debugger.LogError("若使用编码Protobuf-lua-gen功能，需要自己配置外部环境！！");
-            return;
-        }
+        //if (!AppConst.ExampleMode) {
+        //    Debugger.LogError("若使用编码Protobuf-lua-gen功能，需要自己配置外部环境！！");
+        //    return;
+        //}
         //string dir = AppDataPath + "/Lua/3rd/pblua";
         string dir = AppDataPath + "/Proto";
         paths.Clear(); files.Clear(); Recursive(dir);
@@ -321,7 +321,7 @@ public class Packager {
             ProcessStartInfo info = new ProcessStartInfo();
             info.FileName = protoc;
             //info.Arguments = " --lua_out=./ --plugin=protoc-gen-lua=" + protoc_gen_dir + " " + name;
-            info.Arguments = " --descriptor_set_out=../LuaFramework/Lua/3rd/pbc/" + pName + ".pb --plugin=protoc-gen-lua=" + protoc_gen_dir + " " + name;
+            info.Arguments = " --descriptor_set_out=../LuaFramework/Lua/3rd/pbc/pb/" + pName + ".pb --plugin=protoc-gen-lua=" + protoc_gen_dir + " " + name;
             info.WindowStyle = ProcessWindowStyle.Hidden;
             info.UseShellExecute = true;
             info.WorkingDirectory = dir;

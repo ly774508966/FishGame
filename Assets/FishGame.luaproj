@@ -26,11 +26,13 @@
     <Folder Include="LuaFramework\Editor\" />
     <Folder Include="LuaFramework\Examples\" />
     <Folder Include="LuaFramework\Examples\Builds\" />
+    <Folder Include="LuaFramework\Examples\Builds\Main\" />
     <Folder Include="LuaFramework\Examples\Builds\Message\" />
     <Folder Include="LuaFramework\Examples\Builds\Prompt\" />
     <Folder Include="LuaFramework\Examples\Editor Default Resources\" />
     <Folder Include="LuaFramework\Examples\Editor\" />
     <Folder Include="LuaFramework\Examples\Textures\" />
+    <Folder Include="LuaFramework\Examples\Textures\Main\" />
     <Folder Include="LuaFramework\Examples\Textures\Prompt\" />
     <Folder Include="LuaFramework\Examples\Textures\Shared\" />
     <Folder Include="LuaFramework\Lua\" />
@@ -114,6 +116,8 @@
   <ItemGroup>
     <Content Include="LuaFramework\Editor\CustomSettings.cs" />
     <Content Include="LuaFramework\Editor\Packager.cs" />
+    <Content Include="LuaFramework\Examples\Builds\Main\BG.prefab" />
+    <Content Include="LuaFramework\Examples\Builds\Main\MainPanel.prefab" />
     <Content Include="LuaFramework\Examples\Builds\Message\MessagePanel.prefab" />
     <Content Include="LuaFramework\Examples\Builds\Prompt\PromptItem.prefab" />
     <Content Include="LuaFramework\Examples\Builds\Prompt\PromptPanel.prefab" />
@@ -124,6 +128,7 @@
     <Content Include="LuaFramework\Examples\Editor Default Resources\WelcomeScreenSamplesIcon.png" />
     <Content Include="LuaFramework\Examples\Editor Default Resources\WelcomeScreenVideosIcon.png" />
     <Content Include="LuaFramework\Examples\Editor\WelcomeScreen.cs" />
+    <Content Include="LuaFramework\Examples\Textures\Main\bg01.png" />
     <Content Include="LuaFramework\Examples\Textures\Prompt\1.png" />
     <Content Include="LuaFramework\Examples\Textures\Shared\ButtonClick.png" />
     <Content Include="LuaFramework\Examples\Textures\Shared\ButtonDisable.png" />

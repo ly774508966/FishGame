@@ -1,7 +1,23 @@
---region *.lua
---Date
---此文件由[BabeLua]插件自动生成
+local transform;
+local gameObject;
 
+MainPanel = {};
+local this = MainPanel;
 
+--启动事件--
+function MainPanel.Awake(obj)
+	gameObject = obj
+	transform = obj.transform
 
---endregion
+	this.InitPanel()
+	logWarn("Awake lua--->>"..gameObject.name)
+end
+
+--初始化面板--
+function MainPanel.InitPanel()
+end
+
+--单击事件--
+function MainPanel.OnDestroy()
+	logWarn("OnDestroy---->>>")
+end

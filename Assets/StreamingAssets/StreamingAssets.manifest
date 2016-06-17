@@ -59,17 +59,9 @@ AssetBundleManifest:
       Name: lua/lua.unity3d
       Dependencies: {}
     Info_19:
-      Name: prompt.unity3d
+      Name: main.unity3d
       Dependencies:
-        Dependency_0: prompt_asset.unity3d
-        Dependency_1: shared_asset.unity3d
+        Dependency_0: main_asset.unity3d
     Info_20:
-      Name: message.unity3d
-      Dependencies:
-        Dependency_0: shared_asset.unity3d
-    Info_21:
-      Name: prompt_asset.unity3d
-      Dependencies: {}
-    Info_22:
-      Name: shared_asset.unity3d
+      Name: main_asset.unity3d
       Dependencies: {}

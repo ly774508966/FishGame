@@ -453,7 +453,7 @@ PlayerSettings:
   - WebGL::template
   WebGL::emscriptenArgs: 
   WebGL::template: APPLICATION:Default
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: fe4ad443-ceba-4279-8481-db9440a9b88c
+  projectName: LuaFramework_UGUI
+  organizationId: tim-1914036
   cloudEnabled: 0
