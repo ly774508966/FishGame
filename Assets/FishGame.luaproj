@@ -43,6 +43,7 @@
     <Folder Include="LuaFramework\Lua\3rd\luabitop\doc\img\" />
     <Folder Include="LuaFramework\Lua\3rd\pbc 1\" />
     <Folder Include="LuaFramework\Lua\3rd\pbc\" />
+    <Folder Include="LuaFramework\Lua\3rd\pbc\pb\" />
     <Folder Include="LuaFramework\Lua\3rd\pblua\" />
     <Folder Include="LuaFramework\Lua\3rd\sproto\" />
     <Folder Include="LuaFramework\Lua\Common\" />
@@ -158,6 +159,7 @@
     <Content Include="LuaFramework\Lua\3rd\pbc\addressbook.pb" />
     <Content Include="LuaFramework\Lua\3rd\pbc\addressbook.proto" />
     <Content Include="LuaFramework\Lua\3rd\pbc\Mo.pb" />
+    <Content Include="LuaFramework\Lua\3rd\pbc\pb\Mo.pb" />
     <Content Include="LuaFramework\Lua\3rd\pblua\login.proto" />
     <Content Include="LuaFramework\Scenes\main.unity" />
     <Content Include="LuaFramework\Scripts\Common\LuaBehaviour.cs" />
