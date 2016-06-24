@@ -8,9 +8,12 @@ public class SocketCommand : ControllerCommand {
     public override void Execute(IMessage message) {
         object data = message.Body;
         if (data == null) return;
-        KeyValuePair<int, ByteBuffer> buffer = (KeyValuePair<int, ByteBuffer>)data;
+        KeyValuePair<int, SessionData> buffer = (KeyValuePair<int, SessionData>)data;
         switch (buffer.Key) {
-            default: Util.CallMethod("Network", "OnSocket", buffer.Key, buffer.Value); break;
+
+
+            //default: Util.CallMethod("Network", "OnSocket", buffer.Key, buffer.Value); break;
+            default:    break;
         }
 	}
 }

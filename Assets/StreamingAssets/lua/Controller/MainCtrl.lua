@@ -15,6 +15,7 @@ end
 function MainCtrl.Awake()
 	logWarn("MainCtrl.Awake--->>");
 	panelMgr:CreatePanel('Main', this.OnCreate);
+--    networkMgr:AddEvent(999999,function() log("message is call back!") end,nil);
 end
 
 --启动事件--
@@ -24,7 +25,9 @@ function MainCtrl.OnCreate(obj)
 	this.transform = obj.transform;
 	this.panel = this.transform:GetComponent('UIPanel');
 	this.prompt = this.transform:GetComponent('LuaBehaviour');
-	logWarn("Start lua--->>"..this.gameObject.name);
+    this.btnSend = find("BG/btn_send");
+    logWarn("Start lua--->>"..this.gameObject.name);
+    this.prompt:AddClick(this.btnSend,function (go) networkMgr:sendMessage(999999,function (sessionData) log("message is call back!") end,nil,getMo(nil)) end);
 --	resMgr:LoadPrefab('prompt', { 'PromptItem' }, this.InitPanel);
 end
 

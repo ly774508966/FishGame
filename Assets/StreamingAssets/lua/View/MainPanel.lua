@@ -15,6 +15,7 @@ end
 
 --初始化面板--
 function MainPanel.InitPanel()
+--    this._btnSend = transform.Get
 end
 
 --单击事件--

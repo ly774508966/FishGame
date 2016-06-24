@@ -14,7 +14,7 @@ public class TestCoroutine : MonoBehaviour
     {        
         lua  = new LuaState();
         lua.Start();
-        LuaBinder.Bind(lua);                
+        //LuaBinder.Bind(lua);                
         looper = gameObject.AddComponent<LuaLooper>();
         looper.luaState = lua;
 

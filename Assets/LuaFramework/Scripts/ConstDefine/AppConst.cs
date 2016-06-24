@@ -33,8 +33,8 @@ namespace LuaFramework {
         public const string UIDir = "Resources/UI"; //UI素材目录
 
         public static string UserId = string.Empty;                 //用户ID
-        public static int SocketPort = 8038;                           //Socket服务器端口
-        public static string SocketAddress = "192.168.10.69";          //Socket服务器地址
+        public static int SocketPort = 8038;                           //Socket服务器端口,在Game。lua中修改
+        public static string SocketAddress = "192.168.12.131";          //Socket服务器地址,在Game。lua中修改
         public static string FrameworkRoot {
             get {
                 return Application.dataPath + "/" + AppName;

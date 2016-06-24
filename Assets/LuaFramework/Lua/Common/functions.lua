@@ -48,3 +48,29 @@ function findPanel(str)
 	end
 	return obj:GetComponent("BaseLua");
 end
+
+require "3rd/pbc/protobuf"
+function sendMessage(pName,data)
+    local code = protobuf.encode("MoData", data)
+    ----------------------------------------------------------------
+    local buffer = ByteBuffer.New();
+    buffer:WriteBuffer(code);
+    networkMgr:SendMessage(buffer);
+end
+
+function getMo(val)
+    local temp = "";
+    if val ~= nil and #val >=1 then 
+        for k,v in ipairs(val) do  
+            temp = temp..v.."Ω";
+        end
+        temp = string.sub(temp,0,string.len(temp)-1);
+    end
+    local mo = {
+        msg = "";
+    }
+    mo.msg = temp;
+    log("获得Mo数据"..mo.msg);
+    local data = protobuf.encode("com.ftkj.proto.MoData",mo);
+    return data;
+end

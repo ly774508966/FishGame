@@ -3,6 +3,7 @@
 --此文件由[BabeLua]插件自动生成
 
 require "Common/define"
+require "3rd/pbc/protobuf"
 
 MainCtrl = {};
 local this = MainCtrl;
@@ -15,6 +16,7 @@ end
 function MainCtrl.Awake()
 	logWarn("MainCtrl.Awake--->>");
 	panelMgr:CreatePanel('Main', this.OnCreate);
+--    networkMgr:AddEvent(999999,function() log("message is call back!") end,nil);
 end
 
 --启动事件--
@@ -24,7 +26,12 @@ function MainCtrl.OnCreate(obj)
 	this.transform = obj.transform;
 	this.panel = this.transform:GetComponent('UIPanel');
 	this.prompt = this.transform:GetComponent('LuaBehaviour');
-	logWarn("Start lua--->>"..this.gameObject.name);
+    this.btnSend = find("BG/btn_send");
+    logWarn("Start lua--->>"..this.gameObject.name);
+    this.prompt:AddClick(this.btnSend,function (go) 
+    local data = getMo({"123","321"});
+    networkMgr:sendMessage(999999,function (sessionData) log("message is call back!") end,nil,data);
+    end);
 --	resMgr:LoadPrefab('prompt', { 'PromptItem' }, this.InitPanel);
 end
 

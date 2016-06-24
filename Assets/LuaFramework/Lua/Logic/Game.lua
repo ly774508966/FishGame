@@ -14,6 +14,8 @@ require "Logic/LuaClass"
 require "Logic/CtrlManager"
 require "Common/functions"
 require "Controller/PromptCtrl"
+require "Logic/Network"
+
 
 --管理器--
 Game = {};
@@ -30,16 +32,22 @@ function Game.InitViewPanels()
 	end
 end
 
+
+function Game.InitProto()
+    Network.RegisterProtoPB("Mo");
+end
+
+
 --初始化完成，发送链接服务器信息--
 function Game.OnInitOK()
     print("进入Game的OnInitOK方法，开始实例化");
     AppConst.SocketPort = 8038;
-    AppConst.SocketAddress = "192.168.10.69";
+    AppConst.SocketAddress = "192.168.12.131";
     networkMgr:SendConnect();
 
     --注册LuaView--
     this.InitViewPanels();
-
+    this.InitProto();
 --    this.test_class_func();
 --    this.test_pblua_func();
 --    this.test_cjson_func();

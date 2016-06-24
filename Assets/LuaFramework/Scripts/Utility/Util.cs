@@ -306,7 +306,7 @@ namespace LuaFramework {
             return luaMgr.CallFunction(module + "." + func, args);
         }
 
-                /// <summary>
+        /// <summary>
         /// 检查运行环境
         /// </summary>
         public static bool CheckEnvironment() {

@@ -98,7 +98,9 @@
     <Compile Include="Assets\LuaFramework\Scripts\Network\ByteBuffer.cs" />
     <Compile Include="Assets\LuaFramework\Scripts\Network\Converter.cs" />
     <Compile Include="Assets\LuaFramework\Scripts\Network\Protocal.cs" />
+    <Compile Include="Assets\LuaFramework\Scripts\Network\SessionData.cs" />
     <Compile Include="Assets\LuaFramework\Scripts\Network\SocketClient.cs" />
+    <Compile Include="Assets\LuaFramework\Scripts\Network\SocketMessage.cs" />
     <Compile Include="Assets\LuaFramework\Scripts\Utility\LuaHelper.cs" />
     <Compile Include="Assets\LuaFramework\Scripts\Utility\Util.cs" />
     <Compile Include="Assets\LuaFramework\Scripts\View\AppView.cs" />
@@ -197,6 +199,7 @@
     <Compile Include="Assets\LuaFramework\ToLua\Source\Generate\LuaFramework_TimerManagerWrap.cs" />
     <Compile Include="Assets\LuaFramework\ToLua\Source\Generate\LuaFramework_UtilWrap.cs" />
     <Compile Include="Assets\LuaFramework\ToLua\Source\Generate\ManagerWrap.cs" />
+    <Compile Include="Assets\LuaFramework\ToLua\Source\Generate\SessionDataWrap.cs" />
     <Compile Include="Assets\LuaFramework\ToLua\Source\Generate\UnityEngine_AnimationBlendModeWrap.cs" />
     <Compile Include="Assets\LuaFramework\ToLua\Source\Generate\UnityEngine_AnimationClipWrap.cs" />
     <Compile Include="Assets\LuaFramework\ToLua\Source\Generate\UnityEngine_AnimationStateWrap.cs" />
